@@ -10,25 +10,29 @@
 import random as rand
 #krewes = "2$$$A$$$B@@@7$$$C$$$D@@@8$$$E$$$F@@@2$$$G$$$H"
 
-krewes_file = open('krewes.txt', 'r')
+krewes_file = open('krewes.csv', 'r')
 krewes = krewes_file.read()
 
 def dev_duck(string_krew):
     dev_duckies = {} #dictionary of period : "devo | ducky"
-    info = string_krew.split("@@@") #period, name, and ducky including the $$$, creates a list of strings
+    info = string_krew.split('\n') #period, name, and ducky including the $$$, creates a list of strings
+    print(info)
     for i in range(len(info)):
-        devo = tuple(info[i].split("$$$")) # splits each element of info into a tuple of period, name, ducky
-        if (int(devo[0]) not in dev_duckies): #if there isn't already a key with the same period as devo[0]
-            temp = devo[1] + '|' + devo[2]
-            dev_duckies[int(devo[0])] = [temp]
+        devo = tuple(info[i].split(",")) # splits each element of info into a tuple of email, period, ducky
+        print(devo)
+        print(devo[1])
+        if (int(devo[1]) not in dev_duckies): #if there isn't already a key with the same period as devo[0]
+            temp = devo[0] + '|' + devo[2]
+            dev_duckies[int(devo[1])] = [temp]
         else:
-            temp = dev_duckies[int(devo[0])] #new key with value devo[0] because that period isn't already a key in the dictionary
-            temp.append(devo[1] + '|' + devo[2])
-            
+            temp = dev_duckies[int(devo[1])] #new key with value devo[1] because that period isn't already a key in the dictionary
+            temp.append(devo[0] + '|' + devo[2])
+    
     periods = list(dev_duckies)
+    print(periods)
     period = rand.choice(periods)
     devo = rand.choice(dev_duckies[period]) #devo is in format "devo | ducky"
     
-    print("The selected devo is in period " + str(period) + ". Their name is " + devo.split("|")[0] + " and their ducky's name is " + devo.split("|")[1] + ".")
+    print("The selected devo is in period " + str(period) + ". Their email is " + devo.split("|")[0] + " and their ducky's name is " + devo.split("|")[1] + ".")
 
 dev_duck(krewes)
