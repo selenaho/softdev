@@ -8,10 +8,10 @@
 # QCC: How to read text files? (answer on Piazza already) How should we check if our code including reading the text file works?
 # OPS SUMMARY: We first used split to split up each tuple by @@@ into a variable called info. Then, we used a for loop to loop through each tuple and separate each element. This allows us to populate the dictionary dev_duckies with periods as the keys and the corresponding devo and ducky in the value. After populating the dictionary, we used rand.choice to randomly select a developer and then print out their corresponding information.
 import random as rand
-krewes = "2$$$A$$$B@@@7$$$C$$$D@@@8$$$E$$$F@@@2$$$G$$$H"
+#krewes = "2$$$A$$$B@@@7$$$C$$$D@@@8$$$E$$$F@@@2$$$G$$$H"
 
-# krewes_file = open(“krewes.txt”, “r”)
-# krewes = krewes_files.read()
+krewes_file = open('krewes.txt', 'r')
+krewes = krewes_file.read()
 
 def dev_duck(string_krew):
     dev_duckies = {} #dictionary of period : "devo | ducky"
