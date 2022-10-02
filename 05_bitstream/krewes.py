@@ -16,7 +16,7 @@ krewes = krewes_file.read()
 def dev_duck(string_krew):
     dev_duckies = {} #will be a dictionary formatted like period : "email|ducky"
     info = string_krew.split('\n') #creates a list of strings of 'email,period,ducky'
-    for i in range(len(info)):
+    for i in range(len(info)-1): #length - 1 because splitting with new line includes an empty string at the end of the file that doesn't include any devo's info
         devo = tuple(info[i].split(",")) # splits each element of the info list into a tuple of email, period, ducky
         if (int(devo[1]) not in dev_duckies): #if there isn't already a key with the same period as devo[0] then new key = int(devo[1]) added to dictionary
             temp = devo[0] + '|' + devo[2]
