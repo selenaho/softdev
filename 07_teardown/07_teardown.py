@@ -1,5 +1,10 @@
-
-# your heading here
+'''
+Selena Ho, Shafiul Haque, Daniel He
+SoftDev
+K07 -- Starting Flask
+2022-10-03
+time spent: 0.5
+'''
 
 from flask import Flask
 
