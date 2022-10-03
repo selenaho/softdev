@@ -1,12 +1,14 @@
-# Selena Ho, Aleksandra Shifrina
-# SoftDev
-# K05 -- Krewes/Dictionaries, Tuples, Split, Random/Given csv file - take this info and put it into a dictionary and then randomly choose and print a devo's information.
-# 2022-09-29
-# time spent: 1.0
-
-# DISCO: .append is used with dictionaries to update the values for the keys in dictionaries. open(<file_name>, <method>)
-# QCC: How to read text files? (answer on Piazza already) How should we check if our code including reading the text file works?
-# OPS SUMMARY: We first used split to split up each tuple by \n into a list of strings called info. Then, we used a for loop to loop through each tuple and separate the email, period and ducky name. This allows us to populate the dictionary dev_duckies with periods as the keys and the corresponding email and ducky in the value. After populating the dictionary, we used rand.choice to randomly select a period and then a developer in that period and print out their corresponding information.
+'''
+ TNPG: Harry and Lloyd
+ Roster: Selena Ho, Aleksandra Shifrina
+ SoftDev
+ K05 -- Krewes/Dictionaries, Tuples, Split, Random/Given csv file - take this info and put it into a dictionary and then randomly choose and print a devo's information.
+ 2022-09-29
+ time spent: 1.0
+ DISCO: .append is used with dictionaries to update the values for the keys in dictionaries. open(<file_name>, <method>)
+ QCC: How to read text files? (answer on Piazza already) How should we check if our code including reading the text file works?
+ OPS SUMMARY: We first used split to split up each tuple by \n into a list of strings called info. Then, we used a for loop to loop through each tuple and separate the email, period and ducky name. This allows us to populate the dictionary dev_duckies with periods as the keys and the corresponding email and ducky in the value. After populating the dictionary, we used rand.choice to randomly select a period and then a developer in that period and print out their corresponding information.
+'''
 import random as rand
 #krewes = "2$$$A$$$B@@@7$$$C$$$D@@@8$$$E$$$F@@@2$$$G$$$H"
 
