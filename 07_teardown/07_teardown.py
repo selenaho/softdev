@@ -20,6 +20,8 @@ app.run()  # Q5: Where have you seen similar constructs in other languages?
 
 '''
 DISCO:
+- print(__name__) prints __main__ in shell(?) What is __name__ vs __main__?
+- clicking on link runs hello_world
 QCC:
 0. Similar to Java syntax for objects
 1. It's present in links to websites for example, like github.com/stuy-softdev
