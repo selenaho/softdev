@@ -1,10 +1,9 @@
-# Ryan Lee, Justin Mohabir, Selena Ho
-# Team: Ducks
-# Duckies: Luigi, Alfred, Soy
+# Gordon Mo, Joshua Liu, Selena Ho
+# Team: Go Jose!
 # SoftDev
-# K11 -- Form(s) Like Voltron
-# 2022-10-14
-# time spent: .6
+# K12 -- Take and Give//POST Requests
+# 2022-10-17
+# time spent: .9
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -34,38 +33,13 @@ PROTIP: Insert your own in-line comments
 
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app)
-    print("***DIAG: request obj ***")
-    print(request)
-    print("***DIAG: request.args ***") #arguments come from the inputs in html file
-    print(request.args)
-    #print("***DIAG: request.args['username']  ***") #leave commented out, there is no input for username when first displaying login page
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
-    #print("***request.form stuff***")
-    #print(request.form)
     return render_template( 'login.html' )
 
 
-@app.route("/auth", methods=['GET', 'POST'])
+@app.route("/response", methods=['GET', 'POST'])
 def authenticate():
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app)
-    print("***DIAG: request obj ***")
-    print(request)
-    print("***DIAG: request.args ***")
-    print(request.args)
-    print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
-    print("***request.form stuff***")
     print(request.form)
-    return "Waaaa hooo HAAAH"  #response to a form submission
+    return render_template('response.html', username = request.form['username'])  #response to a form submission
 
 
     

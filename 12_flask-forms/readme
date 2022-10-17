@@ -1,37 +1,9 @@
-# Ryan Lee, Justin Mohabir, Selena Ho
-# Team: Ducks
-# Duckies: Luigi, Alfred, Soy
-# SoftDev
-# K11 -- Form(s) Like Voltron // HTML forms plus Flask
-# 2022-10-14
-# time spent: .9
+Go Jose!
+Gordon Mo, Joshua Liu, Selena Ho
+SoftDev
+K12 -- POST requests
+2022-10-17
+time spent: 0.9
 
-Disco:
-- Print app prints <Flask 'app'>
-- print request prints the address that the terminal is requesting to use
-- print rqeust.args() prints ImmutableMultiDict([])
-  - Immutable dictionary stores the username values which is why they should not be changed 
-  or include repeat values
-- Headers are information about the browser, operating system, and terminal being used
- - action="/auth" in the html file connects the username information to the route "/auth
-  " in backend
-- When we add a username to the query then a data type of 'username' and the username are saved
-  along with a (sub1, and 'submit Query') from the login.html file
-- A multidictinary is a sub-class of dic that can contain multiple values for the same key
-- can't do request.args['username'] in disp_loginpage() --> BadRequestKeyError because there is no user input for username when the login page is first being displayed
-
-With just GET and both GET and POST method "127.0.0.1 - - [15/Oct/2022 18:51:29] "GET / HTTP/1.1" 200 -" appears in terminal when link is clicked
-After submitting username "127.0.0.1 - - [15/Oct/2022 18:52:43] "GET /auth?username=fsd&sub1=Submit HTTP/1.1" 200 -" appears in terminal
-
-With just POST in disp_loginpage(), "Method Not Allowed
-The method is not allowed for the requested URL." displayed in website
-
-QCC:
-what does methods=['GET', 'POST']) mean?
-What does POST do?
-Predictions: 
-- disp_loginpage() will print many statements in the terminal 
-- print(app) will print an address 
-- print(request.args) and print(request.headers) will print ?
- 
-html form inputs
+include username = request.form['username'] within the render_template parentheses so that the template can have access to the username stored
+POST method doesn't lead to a query string
