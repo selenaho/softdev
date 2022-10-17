@@ -6,4 +6,4 @@ K12 -- POST requests
 time spent: 0.9
 
 include username = request.form['username'] within the render_template parentheses so that the template can have access to the username stored
-POST method doesn't lead to a query string
+POST method doesn't create a query string
