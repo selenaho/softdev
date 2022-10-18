@@ -14,23 +14,6 @@ from flask import request           #facilitate form submission
 
 app = Flask(__name__)    #create Flask object
 
-
-'''
-trioTASK:
-~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
-...read for understanding all of the code below.
-Some will work as written; other sections will not. 
-TASK: Predict which...
-Devise some simple tests you can run to "take apart this engine," as it were.
-Execute your tests.
-Process results.
-
-PROTIP: Insert your own in-line comments
- wherever they will help
-  your future self and/or current teammates
-   understand what is going on.
-'''
-
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
     return render_template( 'login.html' )
