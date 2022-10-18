@@ -22,7 +22,11 @@ def disp_loginpage():
 @app.route("/response", methods=['GET', 'POST'])
 def authenticate():
     print(request.form)
-    return render_template('response.html', username = request.form['username'])  #response to a form submission
+    if(request.method == 'GET'):
+        return render_template('response.html', username = request.args.get('username'), Method = request.method)
+    else:
+        return render_template('response.html', username = request.form.get('username'), Method = request.method)
+    #response to a form submission
 
 
     

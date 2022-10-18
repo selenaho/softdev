@@ -24,9 +24,16 @@
 
 
     <h3>
-      Enter your username below to proceed.
+      Enter your username below to proceed. (POST)
     </h3>
     <form action="/response" method="POST">
+      <input type="text" name="username">
+      <input type="submit" name="sub1">
+    </form>
+    <h3>
+      Enter your username below to proceed. (GET)
+    </h3>
+    <form action="/response" method="GET">
       <input type="text" name="username">
       <input type="submit" name="sub1">
     </form>

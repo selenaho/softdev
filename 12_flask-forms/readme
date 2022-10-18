@@ -9,3 +9,9 @@ include username = request.form['username'] within the render_template parenthes
 POST method doesn't create a query string. Data requested through this method is served through the request body. 
 Data sent from a form using the GET methpd is appended to the URL
 request.form is a POST method 
+
+*Steps (I Think): 
+    1. The User submits a form, the browser sends a GET/POST request to the webserver w/ the "/response" endpoint.
+    2. The webserver looks for the function tied to "/response", ( authenticate() ) and runs it.
+    3. The info is returned to the browser as a GET/POST response.
+    4. The info is shown on the browser as html.
