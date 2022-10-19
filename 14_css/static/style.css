@@ -1,0 +1,65 @@
+
+.container{ /*setting a max and min width for all the elements*/
+	background: rgb(100,100,100);
+	margin:auto;
+	padding: 5px 10px 5px 10px;
+}
+
+h1 {
+	text-align: center;
+	background: rgb(190,190,190);
+	margin-bottom: 0px;
+	margin-top: 5px;
+	color:white;
+}
+h2{
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+h3{
+	padding-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+
+ul {
+  list-style-type: none; /*gets rid of bullets*/
+  margin: 0;
+  padding-left: 10px;
+}
+a{ /* changes url color to white AND removes the underline*/
+	color:white;
+	text-decoration: none; 
+}
+body{ /* changes font */
+	font-family: Arial;
+}
+
+p{
+	padding-right: 5px;
+	margin: 10px 5px 10px 0px;
+}
+
+li a { /*makes area around vertical nav bar clickable not just the text */
+  display: block;
+  width: 150px;
+}
+
+.main {
+	display: flex; /*flexbox*/
+	flex-direction: row; /*aligns children items in a row from right to left*/
+	background-color:rgb(115, 115, 115);
+}
+
+footer {
+	text-align: right;
+	background: rgb(70,70,70);
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.footer_p{
+	margin-top: 3px;
+	margin-bottom: 7px;
+	color:#777777
+}
