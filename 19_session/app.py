@@ -20,11 +20,11 @@ def authenticate():
     if(request.method == 'GET'):
         if(request.args.get('username')== username):
             if(request.args.get('password')==password):
-                return render_template('response.html', message="Congrats on logging in", Method = request.method)
+                return render_template('response.html', Message="Congrats on logging in", Method = request.method)
             else:
-                return render_template('response.html', message="Incorrect password", Method = request.method)    
+                return render_template('response.html', Message="Incorrect password", Method = request.method)    
         else:
-            return render_template('response.html', message="Wrong Username", Method = request.method)
+            return render_template('response.html', Message="Wrong Username", Method = request.method)
     
     #response to a form submission
 
