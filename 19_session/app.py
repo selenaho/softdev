@@ -1,3 +1,14 @@
+'''
+TNPG: Go Jose!
+Gordon Mo, Joshua Liu, Selena Ho
+SoftDev
+K19 -- Using session from flask to work on logging in, remaining logged in, and logging out
+2022-11-03
+time spent: 1.5
+
+QCC:
+Why does the logout button's type have to be submit and not button? What is the button submitting?
+'''
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
@@ -12,10 +23,10 @@ app.secret_key = 'foo'
 
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
-    if ('username' in session):
+    if ('username' in session): #user was logged in and didn't log out
         return render_template('response.html', Message="You were already logged in")
     else: 
-        return render_template( 'login.html' )
+        return render_template( 'login.html' ) #user wasn't logged in and is sent to login page
 
 
 @app.route("/response", methods=['GET', 'POST'])
@@ -25,16 +36,16 @@ def authenticate():
         if(request.args.get('username')== username):
             if(request.args.get('password')==password):
                 session['username'] = request.args.get('username')
-                return render_template('response.html', Message="Congrats on logging in", Method = request.method)
+                return render_template('response.html', Message="Congrats on logging in", Method_message = "The request method we used was " + str(request.method))
             else:
                 return "Wrong password"    
         else:
             return "Wrong username"
-    else:
+    else: #using POST method here
         if(request.form.get('username')== username):
             if(request.form.get('password')==password):
                 session['username'] = request.form.get('username')
-                return render_template('response.html', Message="Congrats on logging in", Method = request.method)
+                return render_template('response.html', Message="Congrats on logging in", Method_message = "The request method we used was " + str(request.method))
             else:
                 return "Wrong password"    
         else:
@@ -42,8 +53,8 @@ def authenticate():
     
 @app.route("/logout")
 def logout():
-    session.pop('username', None)
-    print("log")
+    session.pop('username', None) #removes the value for username from the session
+    #print("log")
     return render_template("login.html")
 
 
