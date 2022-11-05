@@ -5,9 +5,6 @@ SoftDev
 K19 -- Using session from flask to work on logging in, remaining logged in, and logging out
 2022-11-03
 time spent: 1.5
-
-QCC:
-Why does the logout button's type have to be submit and not button? What is the button submitting?
 '''
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
