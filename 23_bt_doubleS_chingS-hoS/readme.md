@@ -6,6 +6,7 @@ time spent: 0.7
 
 # QCC: 
 - How do you change the design that you get from bootstrap?
+- How would the javascript with bootstrap work?
 
 # Disco: 
 - need to include the class because the classes are how bootstrap applies a specific design to an element (?)
