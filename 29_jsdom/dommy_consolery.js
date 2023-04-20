@@ -1,7 +1,8 @@
 // Team Cereal Killers :: Selena Ho, Wanying Li
+//worked with Buffalo x3
 // SoftDev pd8
-// K28 -- Getting more comfortable with the dev console and the DOM
-// 2023-04-17
+// K29 -- Getting more comfortable with the dev console and the DOM
+// 2023-04-20
 // --------------------------------------------------
 
 
