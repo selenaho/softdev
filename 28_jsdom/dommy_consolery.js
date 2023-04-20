@@ -77,6 +77,19 @@ var stripe = function() {
 
 //stripe()
 
+var dasbut = document.getElementById("a"); 
+dasbut.addEventListener('click', ()=>{
+	addItem(fib(20));
+});
+var dasbut = document.getElementById("b"); 
+dasbut.addEventListener('click', ()=>{
+	addItem(fact(7));
+});
+var dasbut = document.getElementById("c"); 
+dasbut.addEventListener('click', ()=>{
+	addItem(GCD(10, 15));
+});
+
 //insert your implementations here for...
 // FIB
 function fib(n) {
