@@ -1,0 +1,9 @@
+QCC:
+- piazza post @629 mentioned class order doesn't matter for the colors because it's based on the order of the stylesheet
+- tested it out and it's true
+- response to our piazza post:
+var dasbut = document.getElementById("b"); 
+dasbut.addEventListener('click', ()=>{
+	console.log(fib(20))
+});
+- anonymous function?
