@@ -1,0 +1,4 @@
+window.requestAnimationFrame() takes in a function containing the code we want to run
+
+The window.cancelAnimationFrame() method cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame().
+ - parameter is requestId which is the ID value returned by the call to window.requestAnimationFrame() that requested the callback.

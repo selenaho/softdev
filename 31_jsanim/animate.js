@@ -19,7 +19,7 @@ var radius = 0;
 var growing = true;
 
 var drawDot = () => {
-    clear;
+    clear(); //clears the screen so the previous circles don't show
     ctx.beginPath(); //starts/allows for new styling
     ctx.strokeStyle = "black"; //sets the stroke (border) color to black
     ctx.arc(c.width/2, c.height/2, radius, 0, 2*Math.PI);
@@ -27,18 +27,30 @@ var drawDot = () => {
     ctx.fill();
     ctx.stroke();
     //console.log(window.requestAnimationFrame(drawDot));
-    window.cancelAnimationFrame(requestId);
-    requestId = window.requestAnimationFrame(drawDot);
-    console.log(requestId);
+    window.cancelAnimationFrame(requestId); //need this so that window.requestAnimationFrame(drawDot) doesn't keep getting called when you press the button and the circle speed doens't increase
+    //otherwise requests will add up every time button is pressed making the circle drawn more per one screen repaint
+    requestId = window.requestAnimationFrame(drawDot); //sets requestId to the new one so that we can use it in window.cancelAnimationFrame in drawDot() and stopIt()
+    //console.log(requestId);
+
     if(radius === c.width/2){
-        r
+        growing = false;
     }
-    radius++;
+    if(radius === 0){
+        growing = true;
+    }
+
+    if (growing) {
+        radius++;
+    }
+    else {
+        radius--;
+    }
+    //console.log(growing);
 };
 
 var stopIt = () => {
     console.log("StopIt invoked...");
-    console.log(requestId);
+    //console.log(requestId);
     //var recent = window.requestAnimationFrame(drawDot);
     window.cancelAnimationFrame(requestId);
 };
