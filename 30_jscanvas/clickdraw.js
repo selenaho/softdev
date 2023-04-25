@@ -8,14 +8,14 @@ var ctx = c.getContext("2d");
 var mode = "rect";
 
 var toggle = document.getElementById("buttonToggle"); 
-toggle.addEventListener('click', (e)=>{
-	toggleMode(e);
+toggle.addEventListener('click', ()=>{
+	toggleMode(); 
 });
 
 //var toggleMode = function(e){
-var toggleMode = (e) => {
-    console.log(e);
-    console.log(mode)
+var toggleMode = (e) => { //what is e?
+    //console.log(e);
+    //console.log(mode);
     console.log("toggling...");
     if (mode === "rect") {
         mode = "circ";
@@ -29,9 +29,9 @@ var toggleMode = (e) => {
 };
 
 var drawRect = function(e) {
-    console.log(e);
-    var mouseX = e.offsetX //gets X-coor of mouse when event is fired, offsetX is the x coor in relation to the canvas
-    var mouseY = e.offsetY //gets Y-coor of mouse when event is fired
+    //console.log(e);
+    var mouseX = e.offsetX; //gets X-coor of mouse when event is fired, offsetX is the x coor in relation to the canvas
+    var mouseY = e.offsetY; //gets Y-coor of mouse when event is fired
     console.log("mouseclick registered at ", mouseX, mouseY);
     ctx.beginPath(); //starts/allows for new styling
     ctx.fillStyle = "red"; //fill color to red
@@ -47,6 +47,7 @@ var drawCircle = (e) => {
     ctx.fillStyle = "red"; //sets the fill color to red
     ctx.strokeStyle = "black"; //sets the stroke (border) color to black
     ctx.arc(mouseX, mouseY, radius, 0, 2*Math.PI);
+    //ctx.arc() on its own doesn't display anything
     ctx.fill();
     ctx.stroke();
 };
@@ -69,4 +70,4 @@ clear.addEventListener('click', ()=>{
 	wipeCanvas();
 });
 
-c.addEventListener("click", draw) //passes the mouse event as parameter for the function
+c.addEventListener("click", draw); //passes the mouse event as parameter for the function
