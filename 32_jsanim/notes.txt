@@ -1,0 +1,7 @@
+    Image() - image object
+    IMAGE_OBJ.src - image source
+    CANVAS_CONTEXT.drawImage() - similar to fillRect but with an image instead
+    Math.random()
+    Math.floor() ...
+
+also similar to last yrs projects
