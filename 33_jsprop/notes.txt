@@ -1,0 +1,15 @@
+Ryan Lee, Selena Ho
+       SoftDev pd8
+       K33 -- JS Bubble & Squeak
+       2023-04-27t
+
+QCC:
+
+
+
+DISCO:
+From documentation: "Event bubbling describes how the browser handles events targeted at nested elements"
+documentation: "An alternative form of event propagation is event capture. This is like event bubbling but the order is reversed: so instead of the event firing first on the innermost element targeted, and then on successively less nested elements, the event fires first on the least nested element, and then on successively more nested elements, until the target is reached"
+
+Capturing means that the actions happen from the outermost element to innermost element that's the target (most nested to least nested); any element that is a child element of the target won't be acted on (disabled by default have to include true to turn it on)
+Bubbling up means that the actions happen from innermost element to outermost element that's the target (least nested to most) (order is from child then parent)
